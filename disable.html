@@ -1,0 +1,652 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="img/yudanikecil.png" rel="shortcut icon">
+<title>Yudany Foundation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style>
+.container {
+	padding: 35px 120px;
+}
+.person {
+	border:10px solid transparent;
+	margin-bottom:25px;
+	width:80%;
+	height:80%;
+	opacity:0.7;
+}
+.person:hover {
+	border-color:#f1f1f1;
+}
+.carousel-inner img {
+	-webkit-filter:grayscale(90%);
+	filter:grayscale(90%); /*make all phots black and white*/
+	width:100%; /*Set width to 100%*/
+	margin:auto;
+}
+.carousel-caption h3 {
+	color:#fff !important;
+}
+@media (max-width:600px) {
+	.carousel-caption {
+		display:none; /*Hide the carousel text when the screen is less then 600 pixels wide*/
+	}
+}
+.bg-1 {
+	background:#2d2d30;
+	color:#bdbdbd;
+}
+.bg-1 h3 {
+	color:#fff;
+}
+.bg-1 p {
+	font-style:italic;
+}
+.list-group-item:first-child {
+	border-top-right-radius:0;
+	border-top-left-radius:0;
+}
+.list-group-item:last-child {
+	border-bottom-right-radius:0;
+	birder-bottom-left-radius:0;
+}
+.thumbnail {
+	padding:0 0 15px 0;
+	border:none;
+	border-radius:0;
+}
+.thumbnail p {
+	margin-top:15px;
+	color:#555;
+}
+.btn {
+	padding:10px 20px;
+	background-color:#333;
+	color:#f1f1f1;
+	border-radius:0;
+	transition: .2s;
+}
+.btn:hover, .btn:focus {
+	border:1px solid #333;
+	background-color:#fff;
+	color:#000;
+}
+.modal-header, h4, .close {
+	background-color:#333;
+	color:#fff !important;
+	text-align:center;
+	font-size:30px;
+}
+.modal-header, .modal-body {
+	padding:40px 50px;
+}
+.nav-tabs li a {
+	color:#777;
+}
+#googleMap {
+	width:100%; /*Span the entire width of the screen*/
+	height:400px; /*Set the height to 400 pixels*/
+	-webkit-filter:grayscale(100%);
+	filter:grayscale(100%); /*Change the color of the map to black and white*/
+}
+
+/*Add a dark background color with a little bit see-through*/
+.navbar {
+	magrin-bottom:0;
+	background-color:#CCC;
+	border:0;
+	font-size:15px !important;
+	letter-spacing:4px;
+	opacity:0,9
+}
+
+/*Add a gray color to all navbar links*/
+.navbar li a, .navbar .navbar-brand {
+	color:#d5d5d5 !important;
+}
+
+/*nav bar default*/
+.navbar-nav li a {
+	color:#333 !important;
+}
+
+/*On hover, the links will turn white*/
+.navbar-nav li a:hover {
+	color:#fff !important;
+}
+
+/*The active link*/
+.navbar-nav li.active a {
+	color:#fff !important;
+	background-color:#29292c !important;
+}
+
+/*Remove border color from the collapsible button*/
+.navbar-default .navbar-toggle {
+	border-color:transparent;
+}
+
+/*dropdown*/
+.open .dropdown-toggle {
+	color:#fff;
+	background-color:#555 !important;
+}
+
+/*dropdown links*/
+.dropdown-menu li a {
+	color:#000 !important;
+}
+
+/*On hover, the dropdown links will turn red*/
+.dropdown-menu li a:hover {
+	background-color:red !important;
+}
+
+/*Add a dark background color to the footer*/
+footer {
+	background-color:#2d2d30;
+	color:#f5f5f5;
+	padding:32px;
+}
+footer a {
+	color:#f5f5f5;
+}
+footer a:hover {
+	color:#777;
+	text-decoration:none;
+}
+body {
+	font:400 15px/1.8 Lato, sans-serif;
+	color:#777;
+}
+.navbar {
+	font-family:Montserrat, sans-serif;
+}
+/* Overwrite default styles of  h3 and h4*/
+h3, h4 {
+	margin:10px 0 30px 0;
+	letter-spacing:10px;
+	font-size:20px;
+	color:#111;
+	text-align:center;
+}
+/*Remove rounded borders on input fields*/
+.form-control {
+	border-radius:0;
+}
+/*Disable the ability to resize textareas*/
+textarea {
+	resize:none;
+}
+</style>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+    	<div class="navbar-header">
+        	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            	<span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="img/logoyudany.png" width="130" height="75"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        	<ul class="nav navbar-nav navbar-right">
+            	<li><a href="whoweare.html">WHO WE ARE</a></li>
+                <li><a href="child.html">FOSTER CHILDREN</a></li>
+                <li><a href="prog.html">PROGRAM</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="waystogive.html">WAYS TO GIVE</a></li>
+                <li class="dropdown">
+                <!--	<a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    	<li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>-->
+                <!-- <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li> -->
+            </ul>
+        </div>
+    </div>
+</nav><!---end navbar--->
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!---indicators--->
+    <ol class="carousel-indicators">
+    	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!---Wrapper for slides--->
+    <div class="carousel-inner" role="listbox">
+    	<div class="item active">
+        	<img src="img/yudany1.jpg" width="1600" height="500">
+            <!--<div class="carousel-caption">
+            	<h3>New York</h3>
+                <p>The atmosphere in New York is awesome</p>
+            </div>-->
+        </div>
+
+        <div class="item">
+    		<img src="img/paper_people_hires1.jpg" alt="stockholm" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>Stockholm</h3>
+            	<p>Thank you, Stockholm - A night we won't forget.</p>
+        	</div>-->
+    	</div>
+
+    	<div class="item">
+    		<img src="img/yudany.jpg" alt="milan" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>Milan</h3>
+            	<p>Eve though the traffic was a mess, we had the best time playing at san siro stadium</p>
+        	</div>-->
+    	</div>
+
+    	<div class="item">
+    		<img src="img/michelangelo1.jpg" alt="studio" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>London</h3>
+            	<p>when we need take a breath</p>
+        	</div>-->
+    	</div>
+
+    	<div class="item">
+    		<img src="img/yudany2.jpg" alt="fix you" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>Paris</h3>
+            	<p>Turn light on and you'll find the path</p>
+        	</div>-->
+    	</div>
+    </div>
+
+    <!---left and right controls--->
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    	<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+	</a>
+</div><!---end Carousel--->
+
+<!---Container (who we are)--->
+<div class="container">
+    <div class="row">
+    	<div class="col-sm-3">
+        	<ul class="nav nav-pills nav-stacked">
+            	<li>
+                	<a class="dropdown-toggle" href="whoweare.html">Hessu Profile</a>
+                    <!--<ul class="dropdown-menu">
+                    	<li><a href="#">History</a></li>
+                        <li><a href="#">Vision, Mission, and Objectives</a></li>
+                        <li><a href="#">Legalities</a></li>
+                        <li><a href="#">Location Map</a></li>
+                    </ul>-->
+                </li>
+                <li class="active">
+                	<a class="dropdown-toggle" href="disable.html">Disabilities</a>
+                    <!--<ul class="dropdown-menu">
+                    	<li><a href="discelebral.html" title="">Cerebral Palsy</a></li>
+   						<li><a href="disautism.html" title="">Autism</a></li>
+    					<li><a href="dismental.html" title="">Mental Retardation</a></li>
+    					<li><a href="disspeech.html" title="">Speech Impaired &amp; Visually Impaired Person</a></li>
+                    </ul>-->
+                </li>
+                <li>
+                	<a class="dropdown-toggle" href="board.html">Board and Professional</a>
+                    <!--<ul class="dropdown-menu">
+                    	<li><a href="board.html" title="">Board</a></li>
+    					<li><a href="prof.html" title="">Professionals</a></li>
+    					<li><a href="organ.html" title="">Organization</a></li>
+                    </ul>-->
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-9">
+        	<ul class="nav nav-tabs">
+    			<li class="active"><a data-toggle="tab" href="#home">Cerebral Palsy</a></li>
+        		<li><a data-toggle="tab" href="#menu1">Autism</a></li>
+        		<li><a data-toggle="tab" href="#menu2">Mental Retardation</a></li>
+                <li><a data-toggle="tab" href="#menu3">Speech &amp; Visually Impaired Person</a></li>
+    		</ul>
+
+    		<div class="tab-content text-justify">
+    			<div id="home" class="tab-pane fade in active">
+        			<h2>Cerebral Palsy</h2>
+                    <p>
+                	Cerebral Palsy (CP) is a condition of impaired cerebrum (largest part of brain) function, or regarded as a condition of paralyzed cerebrum. Cerebrum is the coordination center of human's core activities, such as seeing, hearing, speaking, thinking, learning, and so on. Therefore, if the coordination center is impaired, the ability to perform core activities is also diminished.<br>
+                	</p>
+                	<p>
+                	People with CP have trouble in controlling their body parts, including both fine and gross motor functions, such as chewing, swallowing, grasping objects, and even walking. Their muscles are difficult to coordinate with the brain, so the CP sufferers often seen drooling and having stiff movements.<br>
+                	</p>
+                	<p>
+                	Until now, the real cause of CP has not been determined, but the following factors can increase the risk of children to suffer from CP:<br><br>
+					<strong>a.	Prenatal Factors (Before Birth / Labor)</strong><br>
+						-	Mother taking excessive drugs/medications<br>
+						-	Occurrence of infection during pregnancy, such as rubella, toxoplasmosis, or other viral infections<br>
+						-	Trauma / falling during pregnancy<br><br>
+					<strong>b.	Natal Factors (At Birth / Labor)</strong><br>
+						-	Premature birth<br>
+						-	Vacuum-assisted labor<br>
+						-	Lack of oxygen during labor<br>
+						-	Amniotic fluid poisoning<br><br>
+					<strong>c.	Post-natal Factors (After Birth / Labor)</strong><br>
+						-	Trauma / falling<br>
+						-	Viral infections, such as meningitis<br>
+						-	Brain infections<br>
+						-	Recurrent seizures<br>
+					<br>
+                	</p>
+                	<p>
+                	<img src="img/cp.jpg">
+                	</p><br>
+                	<p>
+                	<strong>1.	SPASTIC TYPE</strong><br>
+						A.	Hemiplegia<br>
+						Hemiplegia / hemiparesis - a malfunction that causes the arm or leg on one side of the body looks weak or paralyzed<br><br>
+
+						B.	Diplegia<br>
+						Diplegia / diparesis - a state where there is disrupted function of lower limbs (legs), while the arms and hands still look normal<br><br>
+
+						C.	Quadriplegia<br>
+						Quadriplegia / quadriparesis – a state where all limbs are weak / withered<br><br>
+
+					<strong>2.	DYSKINETIC TYPE</strong> <br>
+						A.	Distonia<br>
+						Dystonia - problem on the muscle posture / torso, such as bent / distorted<br><br>
+
+						B.	Athetoid<br>
+						Athetoid – relatively a dominant problem in CP when there are involuntary (uncontrolled, unconscious) movements, especially on arms, legs and hands<br><br>
+
+					<strong>3.	ATAXIC TYPE</strong><br>
+
+					Ataxic has impact on the impairment of coordinated movement capability, balance and body posture. Walking gait is sometimes irregular and may occur with widening leg posture. Control of eye movements and depth perception is often compromised. Often, fine motor skills which require hand and eye coordination, such as writing, would be difficult to do.
+                	</p>
+        		</div>
+        		<div id="menu1" class="tab-pane fade">
+        			<h2>Autism</h2>
+                	<p>
+                Autism is a nervous system development disorder in a person, which is mostly caused by heredity or genetic factors. Sometimes, it is able to be detected on as early as the age of 6 months. Detection and treatment as early as possible will enable the patient to be more adaptable to normal condition.<br><br>
+                	</p>
+
+                	<h3>Symptoms of Autism</h3>
+                	<p>
+					The symptoms of autism may appear in children ranging from the age of 30 months since their birth until the age of 3 years at maximum. One is said to be suffering from autism when experiencing one or more of the following characteristics:<br>
+					1.	Difficulties in interacting with other people or objects in the vicinity, as well as linking the events that occur<br>
+					2.	Difficulties in communicating qualitatively, such as to speak and comprehend the language<br>
+					3.	Playing with toys or other objects in an unusual way<br>
+					4.	Difficulties to accept changes in routine activities and familiar environment<br>
+					5.	Repetition of body movements or specific patterns of behavior<br>
+					6.	Having delayed or abnormal development
+					<br>
+                	</p>
+
+                	<h3>Penyebab Autisme</h3>
+                	<p>
+Until now, the causes of a person to suffer from autism are still uncertain. Research conducted by medical experts has produced some hypotheses about the causes of autism. Two factors believed to be the trigger of autism is genetic or hereditary factors and environmental factors, such as the influence of chemical substances or vaccines.<br>
+
+Genetic factors are believed to have a large role on children with autism, although it is not fully believed that autism can only be caused by the genes of the family. Research conducted on autistic children showed that the probability of two identical twins to have autism is 60 to 95%, while the probability of two siblings to suffer from autism is only 2.5 to 8%. This is interpreted as a large role of genes to cause autism, as identical twins have 100% similar genes, while siblings only have 50% similar genes.<br>
+There is a hypothesis that autism is caused by the MMR vaccine, which is normally given to children at the age of which the symptoms of autism begin to appear. This concern is triggered due mercury component in a chemical substance called thimerosal in the vaccine, which is used as preservative. Such mercury component is what is considered to potentially cause autism in children. However, there is no firm evidence to support the hypothesis that autism is caused by vaccines. The use of thimerosal as vaccine preservative has been dismissed, but the number of children with autism is steadily rising.
+					<br>
+                	</p>
+
+                	<h3>Autism Therapy</h3>
+                	<p>
+Several types of autism therapies are traditional and have been proven from time to time, while other therapies have just emerged recently. Unlike other developmental disorder, only a few of treatment manuals that have been published, let alone the standard procedures in treating children with autism. Nonetheless, experts agree that the therapies should start early and should be directed to the difficulties and delays commonly experienced by children with autism, for example; communication and behavioral problems. Comprehensive treatments generally include; Speech Therapy, Occupational Therapy and Applied Behavior Analysis (ABA) to help alter and modify the behavior.<br>
+
+Below is the summary of the various existing literature and simple explanations of some of the treatments that are recognized nowadays. It is necessary for parents to find out and identify the treatments they have chosen for their children directly to people who are professionals in their field. Most of these techniques are comprehensive program, while others are tailored towards specific target to counter the obstacles or difficulties within children with autism.<br>
+1.	Educational Treatment, including but not limited to Applied Behavior Analysis (ABA), whose principles are used in Lovaas research and therefore frequently equated with Discrete Trial Training or Intensive Behavioral Intervention.<br>
+2.	Developmental approach associated with education, known as Floortime.<br>
+3.	TEACCH (Treatment and Education of Autistic and Related Communication – Handicapped Children).<br>
+4.	Biological Treatment, including but not limited to: diet, vitamins and medications to reduce certain behaviors (aggression, hyperactivity, self-harm, etc.).<br>
+5.	Speech - Language Therapy, including but not limited to treatment of association disorder and auditory disorder.<br>
+6.	Communication, improvement of communication ability, such as PECS (Picture Exchange Communication System), sign language, and visual strategies to enable communication through pictures and other supportive tools.<br>
+7.	Autism Intensive Care, which consists of a team from various disciplines that provides intervention at home, school and other social environments.<br>
+8.	Sensory Therapy, including but not limited to Occupational Therapy (OT) and Auditory Integration Training (AIT).
+					<br>
+                	</p>
+        		</div>
+        		<div id="menu2" class="tab-pane fade">
+        			<h2>Mental Retardation</h2>
+                <p>
+                Mental retardation is often associated with other terms as follow:<br>
+                <ol>
+                	<li>Feeble minded</li>
+                    <li>Mentally retarded</li>
+                    <li>Idiot</li>
+                    <li>Imbecile</li>
+                    <li>Moron</li>
+                    <li>Oligophrenia</li>
+                    <li>Educable</li>
+                    <li>Trainable</li>
+                    <li>Totally dependent or needs to be taken care of</li>
+                    <li>Mental subnormal</li>
+                    <li>Mental deficit</li>
+                    <li>Cognitive deficit</li>
+                    <li>Mental disabilities</li>
+                    <li>Mental deficiency</li>
+                    <li>Intellectual disorder</li>
+                </ol>
+				<br>
+                </p>
+
+                <h3>Classifications of Mental Retardation</h3>
+                <p>
+               	Classifications of children with mental retardation by Mulyono Abdurrahman (1994:24) are as follows:<br>
+                <ul>
+                	<li>Medical-Biological Classification</li>
+                </ul>
+                <p>From medical point of view, mental retardation is seen as a result of a disease or condition that is imperfect. According Grosmman Ettel cited by Mulyono Abddurahman (1994:24), the etiologies are as follows:</p>
+                <ol>
+                	<li>As a result of the infection / intoxication</li>
+                    <li>As a result of trauma / other physical causes</li>
+                    <li>As a result of brain disease</li>
+                    <li>As a result of metabolic disorder</li>
+                    <li>As a result of unknown prenatal disease</li>
+                    <li>As a result of chromosome abnormality</li>
+                    <li>Disorders during pregnancy</li>
+                    <li>Environmental factor</li>
+                    <li>As a result of other conditions that have not been classified</li>
+                </ol><br>
+                <ul>
+                	<li>Socio-Psychological Classification</li>
+                </ul>
+                <p>Socio-psychological classification is using criteria of psychomotor and adaptive behavior. There are 4 mental retardation categories according to Wechsler intelligence scale, namely:</p>
+                <ol>
+                	<li>mild mental retardation with IQ of 55-69</li>
+                    <li>moderate mental retardation with IQ of 40-54</li>
+                    <li>severe mental retardation with IQ of 25-39</li>
+                    <li>severe mental retardation with IQ 24 and lower</li>
+                </ol>
+                <br>
+                <ul>
+                	<li>Classification for learning capability</li>
+                </ul>
+				<p>There are 4 types based on the sufferer’s learning capability, namely:</p>
+                <ol>
+                	<li>Limitation in learning or slow learner</li>
+                    <li>Mentally-retarded educable person</li>
+                    <li>Mentally-retarded trainable person</li>
+                    <li>Mentally-retarded person with IQ of lower than 30 who needs to be taken care of</li>
+                </ol>
+
+				<br>
+                </p>
+
+                <h3>Causes of Mental Retardation</h3>
+                <p>
+                Several causes of mental retardation, according to Mulyono Abdurrahman (1994:30), are as follows:<br>
+				<strong>1.	Genetic factors</strong><br>
+					a.	Biochemistry abnormality<br>
+					b.	Chromosome abnormality<br><br>
+				<strong>2.	Causes during pre-natal</strong><br>
+					a.	Rubella infection (chickenpox)<br>
+					b.	Rhesus factor (Rh)<br><br>
+				<strong>3.	Causes during labor/delivery</strong><br>
+					Shortness of breath during labor and injury during premature birth. Shortness of breath may cause brain damage from the lack of oxygen.<br><br>
+				<strong>4.	Causes during post-natal period</strong><br>
+					Infectious diseases and nutritional problems. Encephalitis disease (damaged central nervous system caused by particular viruses) and meningitis (a condition that comes from a bacterial infection, causing inflammation on brain membrane and may damage the central nervous system).<br><br>
+				<strong>5.	Sociocultural</strong>
+				<br><br>
+                </p>
+
+                <h3>Characteristics of Mental Retardation</h3>
+                <p>
+                <strong>1.	Mild Mental Retardation</strong><br>
+					Children with mild mental retardation are able to speak fluently but with limited vocabulary, have difficulty in abstract thinking but are still able to follow certain or limited academic lessons.  At the age of 16 years old, they only have the same intelligence as a 12 year-old child.<br><br>
+				<strong>2.	Moderate Mental Retardation</strong><br>
+					Children with moderate mental retardation are hardly able to follow academic lessons. They are usually trained to take care of themselves and for them to perform daily activities. At adult stage, they only achieve the same level of intelligence as a 7 year-old child.<br><br>
+				<strong>3.	Severe and Profound Mental Retardation</strong><br>
+					Children with severe and profound mental retardation always depend on help and assistance of others throughout their life. They cannot take care of themselves, cannot distinguish the danger, unable to carry on a conversation, and their intelligence can only thrive like normal children aged 3-4 years at the best case.<br>
+          Characteristics of children with mental retardation according to the Ministry of Education and Culture, as written in a project of teacher development in 1995-1996, are as follows:<br>
+          a.	Physical appearance is non-proportional (too small or large head size)<br>
+					b.	Always drooling and looking dazed<br>
+					c.	Unable to take care of themselves in accordance with their age<br>
+					d.	Delay in speech or language development<br>
+					e.	No or lack of attention to the environment<br>
+					f.	Lack of coordination of movements, uncontrolled movements<br>
+					g.	Limited development of visual function, slow thinking ability
+                </p>
+        		</div>
+                <div id="menu3" class="tab-pane fade">
+                	<h2>Speech &amp; Visually Impaired Person</h2>
+                    <strong>Definition of Mute</strong><br>
+                <p>
+Mute, or known as the speech impairment and speech disorder, is the inability of a person to talk. Mute is caused by problems with organs like throat, vocal cords, lungs, mouth, tongue, and so on. Mute is usually associated with deaf. Babies who were born deaf and mute might be caused by various factors, such as genetic factors (heredity or marriage between too close relatives - such as between biological cousins) that result in an abnormal gene mutation. In addition, lack or non-functional hearing organs, delayed language development, damage on the nervous system and muscle structure, and the inability to control movement may also result in speech limitation. Other causes include intellectual disorders, autism, injury or illness.<br><br>
+				</p>
+				<strong>Symptoms of Mute</strong>
+
+				<ol>
+                	<li>Talk loud and unclear</li>
+                    <li>Like to examine the lip movements or gestures of the interlocutor</li>
+                    <li>Liquid discharge from ear</li>
+                    <li>Use hearing aids</li>
+                    <li>Cleft lip / palate</li>
+                    <li>Like to show gestures</li>
+                    <li>Tend to be quiet</li>
+                    <li>Sound nasal</li>
+                    <li>Speech defect, such as lisp</li>
+                </ol>
+				<br>
+				<strong>Causes of Mute</strong>
+                <p>
+Data from the World Health Organization (WHO) states that one in every thousand of born babies suffers from deaf and mute, and almost 50% of such conditions experienced by children are caused by heredity factor. Other causes are due to trauma or injury at the Broca’s area in the brain.<br><br>
+                </p>
+
+                <strong>Definition of Visual Impairment</strong>
+                <p>
+Visual impairment is a general term used for someone who is experiencing disorders or obstacles of eyesight. Based on the level of severity, Visual impairment is divided into two categories, which are Total Blind and Low Vision (limited eyesight). There is a supporting tool for the visually impaired people, which is a special stick in white color with a horizontal red line. As a result of lost / impaired function of their eyesight, these people will be trying to maximize the functions of other senses, such as touching, smelling, hearing, and so on. Therefore, there are a lot of visually impaired people who have extraordinary ability in fields like music or science.<br><br>
+				</p>
+				<strong>Characteristics of Visually Impaired Children</strong>
+				<ol>
+                	<li>
+                    Physical: The physical states of visually impaired persons are no different from their peers. The difference can only be found in the vision organs. Symptoms of visual impairment which can be observed in terms of physical states, among others, include: squint eyes, frequent blinking, like to squint the eyes, red eyelids, irregular and fast eye movements, constantly watery eyes and so on.
+                    </li>
+                    <li>
+                    Behavior: Some behavioral symptoms in children with visual impairments at early stage, among others, include: blinking more frequently than in normal condition, squinting the eyes, and unable to see slightly distant objects. Other symptoms include: itchy eyes, burning, dizzy, and blurred or double vision.
+                    </li>
+                    <li>
+                    Psychological: Not much different from normal children. There is no particular tendency of IQ of the visually impaired children, still ranging from upper to the lower limit. Sometimes, there is a family member that is not ready to accept the condition, which may cause tension / anxiety among the family. A visually impaired person may experience personality barrier, such as suspicious of others, irritability, and excessive dependence.
+                    </li>
+                </ol>
+<br>
+Low vision
+				<ol>
+                	<li>
+                    Writing and reading within a very close distance
+                    </li>
+                    <li>
+                    Able to  read only large letters
+                    </li>
+                    <li>
+                    Squinting or frowning, especially in bright light or when trying to see something
+                    </li>
+                </ol>
+<br>
+				<strong>Causes of Visual Impairment</strong>
+                <ol>
+                	<li>
+                    Pre-natal: The cause of visual impairment during the pre-natal period is very closely connected with the genetic factors and/or the baby development in the womb.
+                    </li>
+                    <li>
+                    Post-natal: Underlying causes of visual impairment that occurs during the post-natal period or on /after the baby is born, among other things, are: damage to the eye or eye nerves at the time of delivery, mother suffers from gonorrhea, other eye diseases that cause visual impairments/blindness like trachoma, and due to accidents.
+                    </li>
+                </ol>
+<br>
+				<strong>Supporting Technology</strong>
+				<p>
+The development of information technology has been widely utilized to help the visually impaired people. The use of programs such as JAWS (screen reader) enables these people to operate a computer. Reading non-Braille character books, which used to be impossible to do by the visually impaired people, is now possible with the help of a scanner. By using such device on a computer that has been equipped with screen reader software, user can simply put the book on the scanner glass, and the program will automatically read the texts that are reproduced by the computer.
+
+                </p>
+                </div>
+    		</div>
+        </div>
+    </div>
+</div><!---end container who we are--->
+<!---footer--->
+<footer class="text-center">
+	<a class="up-arrow" href="#myPage" data-toggle="tooltip" title="To TOP">
+    	<span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br><br>
+    <p>
+    	Yayasan Heesu "Cahaya Cinta"<br>
+		Desa Situsari Kampung Tunggilis<br>
+		No. 150 RT 02/07<br>
+		Kecamatan Cileungsi<br>
+		Kabupaten Bogor, 16280<br>
+		Ph: +62 21 527 5556, +62 21 899 411 92<br>
+		E-mail: <span class="link"><a href="mailto:admin@yudanyfoundation.org">&nbsp;&nbsp;admin@yudanyfoundation.org</a></span>
+    </p>
+    <p>
+    	Yudany Foundation | &copy; 2015
+    </p>
+    <p>Design <a href="#" data-toggle="tooltip" title="visit muza's design"> By Muza's</a></p>
+</footer><!---end footer--->
+
+<script>
+$(document).ready(function(){
+	// Initializa Tooltip
+	$('[data-toggle="tooltip"]').tooltip();
+
+	//Add smooth scrolling to all links in navbar + footer link
+	$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+		//Prevent default anchor click behavior
+		//event.preventDefault();
+
+		//Store hash
+		var hash = this.hash;
+
+		//Using jQuery's animate() method to add smooth page scroll
+		//The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+		$('html, body').animate({
+			scrollTop: $(hash).offset().top
+		}, 900, function(){
+
+			// Add hash (#) to URL when done scrolling (default click behavior)
+			window.location.hash = hash;
+		});
+	});
+})
+</script>
+
+</body>
+</html>

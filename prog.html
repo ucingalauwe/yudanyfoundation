@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="img/yudanikecil.png" rel="shortcut icon">
+<title>Yudany Foundation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style>
+.container {
+	padding: 35px 120px;
+}
+.person {
+	border:10px solid transparent;
+	margin-bottom:25px;
+	width:80%;
+	height:80%;
+	opacity:0.7;
+}
+.person:hover {
+	border-color:#f1f1f1;
+}
+.carousel-inner img {
+	-webkit-filter:grayscale(90%);
+	filter:grayscale(90%); /*make all phots black and white*/
+	width:100%; /*Set width to 100%*/
+	margin:auto;
+}
+.carousel-caption h3 {
+	color:#fff !important;
+}
+@media (max-width:600px) {
+	.carousel-caption {
+		display:none; /*Hide the carousel text when the screen is less then 600 pixels wide*/
+	}
+}
+.bg-1 {
+	background:#2d2d30;
+	color:#bdbdbd;
+}
+.bg-1 h3 {
+	color:#fff;
+}
+.bg-1 p {
+	font-style:italic;
+}
+.list-group-item:first-child {
+	border-top-right-radius:0;
+	border-top-left-radius:0;
+}
+.list-group-item:last-child {
+	border-bottom-right-radius:0;
+	birder-bottom-left-radius:0;
+}
+.thumbnail {
+	padding:0 0 15px 0;
+	border:none;
+	border-radius:0;
+}
+.thumbnail p {
+	margin-top:15px;
+	color:#555;
+}
+.btn {
+	padding:10px 20px;
+	background-color:#333;
+	color:#f1f1f1;
+	border-radius:0;
+	transition: .2s;
+}
+.btn:hover, .btn:focus {
+	border:1px solid #333;
+	background-color:#fff;
+	color:#000;
+}
+.modal-header, h4, .close {
+	background-color:#333;
+	color:#fff !important;
+	text-align:center;
+	font-size:30px;
+}
+.modal-header, .modal-body {
+	padding:40px 50px;
+}
+.nav-tabs li a {
+	color:#777;
+}
+#googleMap {
+	width:100%; /*Span the entire width of the screen*/
+	height:400px; /*Set the height to 400 pixels*/
+	-webkit-filter:grayscale(100%);
+	filter:grayscale(100%); /*Change the color of the map to black and white*/
+}
+
+/*Add a dark background color with a little bit see-through*/
+.navbar {
+	magrin-bottom:0;
+	background-color:#CCC;
+	border:0;
+	font-size:15px !important;
+	letter-spacing:4px;
+	opacity:0,9
+}
+
+/*Add a gray color to all navbar links*/
+.navbar li a, .navbar .navbar-brand {
+	color:#d5d5d5 !important;
+}
+
+/*nav bar default*/
+.navbar-nav li a {
+	color:#333 !important;
+}
+
+/*On hover, the links will turn white*/
+.navbar-nav li a:hover {
+	color:#fff !important;
+}
+
+/*The active link*/
+.navbar-nav li.active a {
+	color:#fff !important;
+	background-color:#29292c !important;
+}
+
+/*Remove border color from the collapsible button*/
+.navbar-default .navbar-toggle {
+	border-color:transparent;
+}
+
+/*dropdown*/
+.open .dropdown-toggle {
+	color:#fff;
+	background-color:#555 !important;
+}
+
+/*dropdown links*/
+.dropdown-menu li a {
+	color:#000 !important;
+}
+
+/*On hover, the dropdown links will turn red*/
+.dropdown-menu li a:hover {
+	background-color:red !important;
+}
+
+/*Add a dark background color to the footer*/
+footer {
+	background-color:#2d2d30;
+	color:#f5f5f5;
+	padding:32px;
+}
+footer a {
+	color:#f5f5f5;
+}
+footer a:hover {
+	color:#777;
+	text-decoration:none;
+}
+body {
+	font:400 15px/1.8 Lato, sans-serif;
+	color:#777;
+}
+.navbar {
+	font-family:Montserrat, sans-serif;
+}
+/* Overwrite default styles of  h3 and h4*/
+h3, h4 {
+	margin:10px 0 30px 0;
+	letter-spacing:10px;
+	font-size:20px;
+	color:#111;
+	text-align:center;
+}
+/*Remove rounded borders on input fields*/
+.form-control {
+	border-radius:0;
+}
+/*Disable the ability to resize textareas*/
+textarea {
+	resize:none;
+}
+</style>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+    	<div class="navbar-header">
+        	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            	<span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="img/logoyudany.png" width="130" height="75"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        	<ul class="nav navbar-nav navbar-right">
+            	<li><a href="whoweare.html">WHO WE ARE</a></li>
+                <li><a href="child.html">FOSTER CHILDREN</a></li>
+                <li class="active"><a href="prog.html">PROGRAM</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="waystogive.html">WAYS TO GIVE</a></li>
+                <li class="dropdown">
+                <!--	<a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    	<li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>-->
+                <!-- <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li> -->
+            </ul>
+        </div>
+    </div>
+</nav><!---end navbar--->
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!---indicators--->
+    <ol class="carousel-indicators">
+    	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!---Wrapper for slides--->
+    <div class="carousel-inner" role="listbox">
+    	<div class="item active">
+        	<img src="img/yudany1.jpg" width="1600" height="500">
+            <!--<div class="carousel-caption">
+            	<h3>New York</h3>
+                <p>The atmosphere in New York is awesome</p>
+            </div>-->
+        </div>
+
+        <div class="item">
+    		<img src="img/paper_people_hires1.jpg" alt="stockholm" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>Stockholm</h3>
+            	<p>Thank you, Stockholm - A night we won't forget.</p>
+        	</div>-->
+    	</div>
+
+    	<div class="item">
+    		<img src="img/yudany.jpg" alt="milan" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>Milan</h3>
+            	<p>Eve though the traffic was a mess, we had the best time playing at san siro stadium</p>
+        	</div>-->
+    	</div>
+
+    	<div class="item">
+    		<img src="img/michelangelo1.jpg" alt="studio" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>London</h3>
+            	<p>when we need take a breath</p>
+        	</div>-->
+    	</div>
+
+    	<div class="item">
+    		<img src="img/yudany2.jpg" alt="fix you" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>Paris</h3>
+            	<p>Turn light on and you'll find the path</p>
+        	</div>-->
+    	</div>
+    </div>
+
+    <!---left and right controls--->
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    	<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+	</a>
+</div><!---end Carousel--->
+
+<!---Container (The Band Section)--->
+<div id="band"class="container text-justify">
+	<h2>Program</h2>
+                	<h3>Therapies</h3>
+                    <ul>
+                    	<li>Physiotherapy</li>
+                    </ul>
+                    <p>Physiotherapy is a science that focuses on stabilizing or improving the motor/body function disorders, followed by the process/method of motion therapy. According to Minister of Health Decree of the Republic of Indonesia No. 778 Year 2008 on Guidelines for Physiotherapy in Healthcare Services, physiotherapy is a healthcare service intended for the individuals and groups in an effort to develop, maintain, and restore movements and functions throughout the individual life cycle through the use of physical modality, physical agent, mechanism, motion, and communication. In physiotherapy, patients can be trained through specific sports, stretching, and a variety of techniques and special tools to help solve the problems faced by them.
+					</p><br>
+                    <ul>
+                    	<li>Occupational Therapy</li>
+                    </ul>
+                    <p>
+                    Occupational Therapy is a form of healthcare to patients with physical and/or mental disorders using selected or targeted exercises/activities (occupational) to improve the independence of the individuals in the area of daily life activities, productivity and utilization of spare time, in order to increase the degree of public health. The main goal of occupational therapy is to enable individuals to participate in everyday activities. Occupational therapists may achieve this goal by working with groups and communities to enhance their ability to engage in activities they want, need, or expect to involve in, as well as by altering the activities or environment to support their involvement in such conditions.
+                    </p><br>
+                    <ul>
+                    	<li>Speech Therapy</li>
+                    </ul>
+                    <p>
+                    Speech therapy is a therapy given to help a person communicate more clearly. This therapy is usually provided to:
+                    </p>
+                    <ul>
+                    	<li>Children who experience speech delay. This is one of the most common forms of growth barrier amongst children, where a child has not mastered speaking ability that should have been picked up at a certain age. Of course, the cause of this circumstance may vary, and must go through the process of screening to be able to evaluate the actual cause and to determine the solution of this problem.</li>
+                        <li>Children and adults who just had cleft lip or cleft palate surgery. With the change of vocal system anatomy, it is very important that post-operative cleft lip/palate patients undergo speech therapy to get the optimal results from such surgery.</li>
+                        <li>Children with special barriers of growth and development (autism, mental retardation, deaf, cerebral palsy).</li>
+                        <li>Children/adults with other speech disorders: stuttering, lisp, etc.</li>
+                        <li>Stroke patients often lose the ability to speak, and speech therapy can help patients to improve their speaking ability.</li>
+                    </ul>
+                    <br>
+                    <h3>Special Education</h3>
+                    <p>
+                    <strong>Special Education</strong><br>
+                    Learning program designed to respond or meet the needs of children with unique characteristics, which cannot be fulfilled by the standard (ordinary) school curriculum. Definition of Special Education can be interpreted as the Special Class, Special Program and/or or Special Services designed to meet the educational aspect of children with special needs.
+                    </p><br>
+                    <h3>Nursery</h3>
+                    <ol>
+                    	<li>Multivitamin Administration</li>
+                        <p>
+                        Administer various multivitamins to all children, especially those in unhealthy conditions.
+                        </p>
+                        <li>Nutrition Improvement</li>
+                        <p>
+                        Conduct and monitor the nutrition improvement programs for children who are malnourished.
+                        </p>
+                        <li>Seizures Therapy/Healing</li>
+                        <p>
+                        Conduct routine therapy or treatment for children who have seizures.
+                        </p>
+                        <li>Medical Treatment of Diseases</li>
+                        <p>
+                        Conduct medical treatment for children who suffer from cough, cold, fever, or other diseases.
+                        </p>
+                    </ol><br>
+                    <h3>Competency Development</h3>
+                    <p>
+                    <strong>Special Education</strong><br>
+Learning program designed to respond or meet the needs of children with unique characteristics, which cannot be fulfilled by the standard (ordinary) school curriculum. Definition of Special Education can be interpreted as the Special Class, Special Program and/or or Special Services designed to meet the educational aspect of children with special needs.
+					</p>             <br>
+                    <h3>Social Relationship</h3>
+                    <ul>
+                    	<li><strong>OPEN HOUSE YAYASAN HEESU WITH THOMAS HUIS STEENWIJK 2014</strong></li>
+                        <p>
+                        Thomas Huis Steenwijk is an organization that provides social care for disabled individuals in Netherlands. A member of the American Women Association, Diane White, introduced Heesu Foundation to Mrs. Henriette Koenen, which is one of the board members of Thomas Huis. After discussions with other members of the board, she finally gave us good news that Thomas Huis was willing to contribute for Heesu Foundation.<br>
+Thomas Huis donate regularly each month to partially support the foundation's operational activities. They are also interested in Heesu Foundation's annual program to provide assistance to local community who are in need. Our surrounding neighborhoods are considered a substantial part of Heesu Foundation that should be appreciated for their favor, as they have regarded Heesu as part of Situsari Village. In 2014, after a discussion with Mrs. Henriette Koenen, we agreed to hold an Open House event to invite the local community and served free snacks, donated free staple foods, arranged a simple talent show event of Heesu's foster children and the employees, as well as inviting Sasha, a child singer, to perform. The event was held on February 22nd, 2014. All board of Thomas Huis Foundation came straight from the Netherlands to attend this event. Meanwhile, Heesu Foundation's board from PT. Jaya Samudra Karunia also attended this Open House event.<br><br>
+                        </p>
+                        <li><strong>CHARITY EVENT OF THOMAS HUIS STEENWIJK</strong></li>
+                        <p>
+                       Thomas Huis Steenwijk is an organization that provides social care for disabled individuals in Netherlands. They have been assisting Heesu Foundation since 2013. Since their first year of becoming a donator for Heesu, Thomas Huis has been holding several charity events for local community. In 2015, after they organized Heesu Open House event in 2014, Thomas Huis held free staple foods giveaway for local community and Heesu Foundation staffs. This served as a form of appreciation to the community and staffs for their compassion in helping Heesu by treating the children with disabilities thoroughly.<br><br>
+                        </p>
+                        <li><strong>SEOUL CHAMBER SOCIETY OF SOUTH KOREA</strong></li>
+                        <p>
+                        Seoul Chamber Society (SCS) is an orchestra musical group originating from South Korea. They consist of professional musicians who play classical genre. SCS visit was part of Korean Festival event organized by Korea Foundation. At that time, Heesu Foundation became one of the foundations that have been selected and contacted by Korea Foundation to hold the simple orchestra event. This served as a form of social charity within a series of events, as part of the 2013 Korean Festival. The event was also attended by representatives of Heesu Foundation board, which is PT. Jaya Samudra Karunia.<br><br>
+                        </p>
+                        <li><strong>IDUL ADHA QURBAN</strong></li>
+                        <p>
+                        Each year, Heesu allocate charity programs for local community who are in need. Upon Idul Adha event, Heesu always arranges qurban, for which the qurban meats will be packaged and distributed to the neighborhoods afterward. The qurbani cows and goats were provided through charity by people who are willing to celebrate, while the slaughtering of qurbani animals was done by local religion leader and local community leader. <br><br>
+                        </p>
+                        <li><strong>•	FREE MEDICATIONS TO LOCAL COMMUNITY IN COLLABORATION WITH HILAL AHMAR</strong></li>
+                        <p>
+                        Heesu Foundation always allocate its annual program for local community in our surrounding area. In addition to holding qurban and donations of staple foods, we also seek to provide free medications for the people in need. In 2013, Heesu Foundation collaborated with Hilal Ahmar Organization Jakarta and Baitul Maal Abdirrahman bin Auf Jakarta Branch in providing free medications for the community. The medical team consisting of doctors and other staffs in medical field cooperated with Heesu Foundation's staffs, including a nurse working in our organization.
+                        </p>
+                    </ul>
+</div><!---end container text center--->
+<!---footer--->
+<footer class="text-center">
+	<a class="up-arrow" href="#myPage" data-toggle="tooltip" title="To TOP">
+    	<span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br><br>
+    <p>
+    	Yayasan Heesu "Cahaya Cinta"<br>
+		Desa Situsari Kampung Tunggilis<br>
+		No. 150 RT 02/07<br>
+		Kecamatan Cileungsi<br>
+		Kabupaten Bogor, 16280<br>
+		Ph: +62 21 527 5556, +62 21 899 411 92<br>
+		E-mail: <span class="link"><a href="mailto:admin@yudanyfoundation.org">&nbsp;&nbsp;admin@yudanyfoundation.org</a></span>
+    </p>
+    <p>
+    	Yudany Foundation | &copy; 2015
+    </p>
+    <p>Design <a href="#" data-toggle="tooltip" title="visit muza's design"> By Muza's</a></p>
+</footer><!---end footer--->
+
+<script>
+$(document).ready(function(){
+	// Initializa Tooltip
+	$('[data-toggle="tooltip"]').tooltip();
+
+	//Add smooth scrolling to all links in navbar + footer link
+	$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+		//Prevent default anchor click behavior
+		//event.preventDefault();
+
+		//Store hash
+		var hash = this.hash;
+
+		//Using jQuery's animate() method to add smooth page scroll
+		//The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+		$('html, body').animate({
+			scrollTop: $(hash).offset().top
+		}, 900, function(){
+
+			// Add hash (#) to URL when done scrolling (default click behavior)
+			window.location.hash = hash;
+		});
+	});
+})
+</script>
+
+</body>
+</html>
